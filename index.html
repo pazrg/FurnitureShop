@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="furniture">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale=1">
+	<title>Furniture Shop</title>
+	<script src = "js/jquery-2.2.4.min.js"></script>
+	<script src="js/parsley.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+	<header>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid" id="navHeader">
+		    <div class="navbar-header center-logo">
+		        <h1><img alt="Brand" src="img/logo.png" class="brandImage">Creative Furniture</h1>
+		    </div>
+		  </div>
+		</nav>
+
+		<ul class="nav nav-tabs">
+		  	<li role="presentation"><a href="#/">Home</a></li>
+		  	<li role="presentation" class="dropdown">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="#/views/all" role="button" aria-haspopup="true" aria-expanded="false" ng-click="myFilter={category}">
+			      Products <span class="caret"></span>
+			    </a>
+			    <ul class="dropdown-menu" >
+			    	<li><a href="#/views/table" ng-click="myFilter={category: 'table'}">Tables</a></li>
+		            <li><a href="#/views/puf" ng-click="myFilter={category: 'puf'}">Pufs</a></li>
+		            <li><a href="#/views/sofa" ng-click="myFilter={category: 'sofa'}">Sofas</a></li>
+			    </ul>
+		  	</li>
+		  	<li role="presentation"><a href="#/contact">Contact</a></li>  
+		</ul>
+	</header>
+  <div ng-view></div>
+<!-- FOOTER -->
+	<footer>			
+		<nav class="navbar navbar-default">
+			<div class="container-fluid" id="footer">
+				<img alt="Brand" src="img/logo.png" class="brandImage">
+				<p>Copy-right <span class="glyphicon glyphicon-copyright-mark"></span> 2016 Creative Furniture. All rights reserved.</p>
+				<p>Design by Ireguca & Pazrg </p>
+			</div>
+		</nav>
+	</footer>
+	<script src = "js/angular.min.js"></script>
+	<script src = "js/angular-route.min.js"></script>
+	<script src = "js/bootstrap.min.js"></script>
+	<script src = "js/app.js"></script>
+</body>
+
+</html>
